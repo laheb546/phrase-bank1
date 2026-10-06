@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Cloud-like light theme */
+:root {
+  --background: #f0f4f8;
+  --background-secondary: #ffffff;
+  --foreground: #1e293b;
+  --foreground-muted: #64748b;
+  --border: #e2e8f0;
+  --card: #ffffff;
+  --card-hover: #f8fafc;
+  --accent: #0f172a;
+  --accent-foreground: #f8fafc;
+  --input-bg: #ffffff;
+  --nav-bg: rgba(255, 255, 255, 0.85);
+  --shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+  --cloud-gradient: linear-gradient(180deg, #e8f0fe 0%, #f0f4f8 40%, #f8fafc 100%);
+}
+
+/* Deep blue dark theme — eye-catchy */
+.dark {
+  --background: #0b1220;
+  --background-secondary: #111827;
+  --foreground: #e2e8f0;
+  --foreground-muted: #94a3b8;
+  --border: #1e293b;
+  --card: #111827;
+  --card-hover: #1a2332;
+  --accent: #3b82f6;
+  --accent-foreground: #ffffff;
+  --input-bg: #0f172a;
+  --nav-bg: rgba(11, 18, 32, 0.9);
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --cloud-gradient: linear-gradient(180deg, #0b1220 0%, #0f1a2e 50%, #111827 100%);
+}
+
+body {
+  background: var(--cloud-gradient);
+  background-attachment: fixed;
+  color: var(--foreground);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  min-height: 100vh;
+}
+
+/* Utility classes that work with CSS variables */
+.bg-card {
+  background-color: var(--card);
+}
+.bg-input {
+  background-color: var(--input-bg);
+}
+.text-muted {
+  color: var(--foreground-muted);
+}
+.border-theme {
+  border-color: var(--border);
+}
+.bg-accent {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+}
+.hover-card:hover {
+  background-color: var(--card-hover);
+}
